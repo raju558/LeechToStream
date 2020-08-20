@@ -99,63 +99,63 @@ if __name__ == "__main__" :
     #
     incoming_g_clear_handler = MessageHandler(
         g_clearme,
-        filters=Filters.command([f"{CLEAR_UNDELETED}"]) & Filters.chat(chats=AUTH_CHANNEL)
+        filters=Filters.command(["CLEAR@Streamdlbot"]) & Filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(incoming_g_clear_handler)
     #
     incoming_youtube_dl_handler = MessageHandler(
         incoming_youtube_dl_f,
-        filters=Filters.command([f"{YTDL_COMMAND}"]) & Filters.chat(chats=AUTH_CHANNEL)
+        filters=Filters.command(["YTDL@Streamdlbot"]) & Filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(incoming_youtube_dl_handler)
     #
     incoming_youtube_playlist_dl_handler = MessageHandler(
         g_yt_playlist,
-        filters=Filters.command([f"{PYTDL_COMMAND}"]) & Filters.chat(chats=AUTH_CHANNEL)
+        filters=Filters.command(["PYTDL@Streamdlbot"]) & Filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(incoming_youtube_playlist_dl_handler)
     #
     status_message_handler = MessageHandler(
         status_message_f,
-        filters=Filters.command([f"{STATUS_COMMAND}"]) & Filters.chat(chats=AUTH_CHANNEL)
+        filters=Filters.command(["STATUS@Streamdlbot"]) & Filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(status_message_handler)
     #
     cancel_message_handler = MessageHandler(
         cancel_message_f,
-        filters=Filters.command([f"{CANCEL_COMMAND_G}"]) & Filters.chat(chats=AUTH_CHANNEL)
+        filters=Filters.command(["CANCEL@Streamdlbot"]) & Filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(cancel_message_handler)
     #
     exec_message_handler = MessageHandler(
         exec_message_f,
-        filters=Filters.command(["exec"]) & Filters.chat(chats=AUTH_CHANNEL)
+        filters=Filters.command(["exec@Streamdlbot"]) & Filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(exec_message_handler)
     #
     '''
     eval_message_handler = MessageHandler(
         eval_message_f,
-        filters=Filters.command(["eval"]) & Filters.chat(chats=AUTH_CHANNEL)
+        filters=Filters.command(["eval@Streamdlbot"]) & Filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(eval_message_handler)
     '''
     #
     rename_message_handler = MessageHandler(
         rename_message_f,
-        filters=Filters.command(["rename"]) & Filters.chat(chats=AUTH_CHANNEL)
+        filters=Filters.command(["rename@Streamdlbot"]) & Filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(rename_message_handler)
     #
     upload_document_handler = MessageHandler(
         upload_document_f,
-        filters=Filters.command(["upload"]) & Filters.chat(chats=AUTH_CHANNEL)
+        filters=Filters.command(["upload@Streamdlbot"]) & Filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(upload_document_handler)
 
     help_text_handler = MessageHandler(
         help_message_f,
-        filters=Filters.command(["help"]) & Filters.chat(chats=AUTH_CHANNEL)
+        filters=Filters.command(["help@Streamdlbot"]) & Filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(help_text_handler)
     #
@@ -178,13 +178,13 @@ if __name__ == "__main__" :
     #
     save_thumb_nail_handler = MessageHandler(
         save_thumb_nail,
-        filters=Filters.command([f"{SAVE_THUMBNAIL}"]) & Filters.chat(chats=AUTH_CHANNEL)
+        filters=Filters.command(["SAVETHUMBNAIL@Streamdlbot"]) & Filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(save_thumb_nail_handler)
     #
     clear_thumb_nail_handler = MessageHandler(
         clear_thumb_nail,
-        filters=Filters.command([f"{CLEAR_THUMBNAIL}"]) & Filters.chat(chats=AUTH_CHANNEL)
+        filters=Filters.command(["CLEARTHUMBNAIL@Streamdlbot"]) & Filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(clear_thumb_nail_handler)
     #
